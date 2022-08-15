@@ -1,3 +1,134 @@
-body {
+
+
+/*reset everything*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(to right, rgb(6, 6, 180), rgb(105, 217, 254) );
+    display: grid;
+    
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top:0;
+    left:0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+ }
+
+ .nav-toggle-label span::before,
+ .nav-toggle-label span::after{
+    content: '' ;
+    position: absolute;
+ }
+
+ .nav-toggle-label span::before{
+    bottom: 7px;
+ }
+
+ .nav-toggle-label span::after{
+     top: 7px;
+ }
+
+nav{
+    position: fixed;
+    text-align: left;
+    top: 0%;
+    width: 100%;
+    background: linear-gradient(to right, rgb(6, 6, 180), rgb(105, 217, 254) );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in;
+}
+
+
+
+nav ul{
+    list-style: none;
+    display:flex;
+}
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    list-style: none;
+}
+
+nav a {
     color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+h1{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    
+}
+
+@media screen and (min-width: 880px) {
+    .nav-toggle-label{
+        display: none;
+    }
+}
+
+
+header a{
+    background-color: #858ea8;
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+body {
+    color: black;
+}
+
+
+.par1{
+    margin-top: 1.2rem;
 }
