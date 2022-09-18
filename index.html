@@ -18,69 +18,124 @@
             <li><a href="#">Sponsor</a></li>
             <li><a href="#">Contatti</a></li>
         </ul>
+        <label for ="nav-toggle" class="nav-toggle-label">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="2.2em" height="2.2em">
+                <line x1="10" x2="54" y1="32" y2="32" stroke-width="6" stroke="var(--fg-0)" stroke-linecap="round" class="top"></line>
+                <line x1="10" x2="54" y1="32" y2="32" stroke-width="6" stroke="var(--fg-0)" stroke-linecap="round" class="middle"></line>
+                <line x1="10" x2="54" y1="32" y2="32" stroke-width="6" stroke="var(--fg-0)" stroke-linecap="round" class="bottom"></line>
+            </svg>
+        </label>
     </nav>
-    <label for ="nav-toggle" class="nav-toggle-label">
-        X
-    </label>
+   
     <!-- first introductory page-->
-    <header class ="par1">
+    <header class ="par1 blue-bg">
         <!-- markup navigation bar-->
-        <div class="introduction">
-            <h2>Una Storia Moderna</h2>
+        <div class="intro stop-growth">
+            <h2 class = "title">Una Storia Moderna</h2>
             <p>Il nostro obiettivo principale? <br>Progettare una "Replica" volante dell'Idrovolante SIAI-Marchetti</p>
             <a href="">Unisciti a noi!</a>
         </div>
-    
-       <!--<div class = "logo">
-            <img src= "img/logo_home_jpeg.jpg">
-        </div> 
-        --> 
+        <img src= "img/logo_home_png.png">
+        
     </header>
     <!--main content of the page organized in 5 different sections (one for each link of the nav)-->
     <main>
-        <section>
-            <h2>Team</h2>
-            <img>
-            <div class = "container1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas lacinia magna nec convallis. 
-                Integer rhoncus in leo id aliquet. Donec vel ante eros. Integer et enim vitae dui ornare volutpat. Sed placerat massa 
-                consectetur venenatis elementum. Aliquam accumsan vestibulum risus, quis dictum felis dapibus pharetra. 
-                Cras sed convallis tellus. Suspendisse feugiat nisi vitae dolor pulvinar, eu tristique ipsum faucibus. 
-                In placerat mi sit amet turpis pretium fermentum vitae quis lorem. Cras tristique ante sit amet est malesuada, 
-                lobortis porta odio porta. Vestibulum nec interdum metus, non vehicula nulla.
-            </div>
-            <p>Le nostre sezioni</p>
-            <hr>
-            <!--markup of the buttons-->
-            <div class = "container2">
-                <ul>
-                    <li><a href="#">Aereomodello</a></li>
-                    <li><a href="#">Comunicazione</a></li>
-                    <li><a href="#">Aerodinamica</a></li>
-                    <li><a href="#">FEM</a></li>
-                    <li><a href="#">Meccanica del volo</a></li>
-                    <li><a href="#">Sistemi</a></li>
-                    <li><a href="#">Managment</a></li>
-                    <li><a href="#">Prove di laboratorio</a></li>
-                    <li><a href="#">FSI</a></li>
-                </ul>
+        <section class="blue-bg">
+            <div class = "two-cols stop-growth">
+                <div class = "container1">
+                    <img src="./img/immagine_team_png.png">
+                    <p>
+                        Il "Team S55" nasce nel 2017 da un gruppo di studenti del Politecnico di Torino,
+                        spinti dalla volontà di aiutare il gruppo "Replica55" nella progettazione, 
+                        volante, del SIAI-Marchetti S55X. Grazie al forte legame con il docente Giuseppe 
+                        Gabrielli, che progettò la prima versione metallica dell'idrovolante, e la 
+                        possibilità di vivere un'esperienza progettuale integrata tra le varie discipline, 
+                        l'intero gruppo si concentra sulla progettazione e possibilità di effettuare prove sperimentali.
+                    </p>
+                </div>
+                <!--markup of the buttons-->
+                <div class = "container2">
+                    <h2>Team</h2>
+                    <div class="didascalia">Le nostre sezioni</div>
+                    <ul class="grid3x3 team-sections">
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_aeromodello_png.png">
+                                <span>Aereomodello</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_comunicazione_png.png">
+                                <span>Comunicazione</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_aerodinamica_png.png">
+                                <span>Aerodinamica</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_fem_png.png">
+                                <span>FEM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_meccanica_png.png">
+                                <span>Meccanica del volo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_sistemi_png.png">
+                                <span>Sistemi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_management_png.png">
+                                <span>Managment</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_aerodinamica_png.png">
+                                <span>Prove di laboratorio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/sezioni/icona_fsi_png.png">
+                                <span>FSI</span>
+                    
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section>
             <h2>S55X</h2>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas lacinia magna nec convallis. 
-                Integer rhoncus in leo id aliquet. Donec vel ante eros. Integer et enim vitae dui ornare volutpat. Sed placerat massa 
-                consectetur venenatis elementum. Aliquam accumsan vestibulum risus, quis dictum felis dapibus pharetra. 
-                Cras sed convallis tellus. Suspendisse feugiat nisi vitae dolor pulvinar, eu tristique ipsum faucibus. 
-                In placerat mi sit amet turpis pretium fermentum vitae quis lorem. Cras tristique ante sit amet est malesuada, 
-                lobortis porta odio porta. Vestibulum nec interdum metus, non vehicula nulla.
+            <div class="grid2 stop-growth">
+                <div>
+                    L'idrovolante Savoia Marchetti S55 X è un simbolo della notevole conoscenza 
+                    aeronautica raggiunta in Italia negli anni '20 e '30, confermato da una serie 
+                    di voli record a lunga distanza. Sebbene siano stati fabbricati circa 250 
+                    aeromobili, ad oggi non esiste un solo esempio volante. Attualmente l'unico 
+                    rimasto e conservato è esposto nel museo aeronautico TAM in Brasile. Nel 2015 
+                    un gruppo di professionisti competenti ed entusiasti del settore aeronautico 
+                    ha avviato il progetto "Replica55" con l'obiettivo di progettare, costruire 
+                    e pilotare una replica dell'idrovoilante S55 X. 
+                </div>
+                <img src="./img/immagine_s55x_png.png"> 
             </div>
-            <img> 
-            <div class="container_img">
-                <img> 
-                <img> 
-                <img> 
+            <div class = "grid4 stop-growth">
+                <img src="./img/immagine_tratta1_png.png">
+                <img src="./img/immagine_tratta2_png.png">
+                <img src="./img/immagine_tratta3_png.png">
                 <a href="">scopri di più</a>
             </div>
         </section>
@@ -89,17 +144,17 @@
         </section>
         <section>
             <h2>Sponsors</h2>
-            <div class = "sponsors">
-                <img>
-                <img>
-                <img>
-                <img>
-                <img>
-                <img>
-                <img>
-                <img>
-                <img>
-                <img>
+            <div class = "sponsors stop-growth">
+                <img src="./img/loghi/icona_poli_png.png">
+                <img src="./img/loghi/altair_png.png">
+                <img src="./img/loghi/replica55_png.png">
+                <img src="./img/loghi/ellena_png.png">
+                <img src="./img/loghi/hpc_png.png">
+                <img src="./img/loghi/siemens_png.png">
+                <img src="./img/loghi/ades_png.png">
+                <img src="./img/loghi/spem_png.png">
+                <img src="./img/loghi/mike_png.png">
+                <img src="./img/loghi/beta_png.png">
             </div>
         </section>
         <!--form-->
