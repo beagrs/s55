@@ -4,111 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href ="css/bootstrap-grid.min.css" rel ="stylesheet">
+    <script src="js/bootstrap.bundle.js"></script>
     <title>S55</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
-    <nav>
-        <h1>Team S55</h1>
-        <ul class = "links">
-            <li><a href="#">Team</a></li>
-            <li><a href="#">S55x</a></li>
-            <li><a href="#">Eventi</a></li>
-            <li><a href="#">Sponsor</a></li>
-            <li><a href="#">Contatti</a></li>
-        </ul>
+    <div class = "navigation-bar blue-bg ">
+        <h1 class = "team-s55">Team S55</h1>
+        <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
+        <nav>
+            <ul class = "links">
+                <li><a class="sottolineatura voci" href="#team-description">Team</a></li>
+                <li><a class="sottolineatura voci" href="#s55-history">S55x</a></li>
+                <li><a class="sottolineatura voci" href="#events">Eventi</a></li>
+                <li><a class="sottolineatura voci" href="#sponsor-team">Sponsor</a></li>
+                <li><a class="sottolineatura voci" href="#form">Contatti</a></li>
+            </ul>
+        </nav>
         <label for ="nav-toggle" class="nav-toggle-label">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="2.2em" height="2.2em">
-                <line x1="10" x2="54" y1="32" y2="32" stroke-width="6" stroke="var(--fg-0)" stroke-linecap="round" class="top"></line>
-                <line x1="10" x2="54" y1="32" y2="32" stroke-width="6" stroke="var(--fg-0)" stroke-linecap="round" class="middle"></line>
-                <line x1="10" x2="54" y1="32" y2="32" stroke-width="6" stroke="var(--fg-0)" stroke-linecap="round" class="bottom"></line>
-            </svg>
+            <span></span>
         </label>
-    </nav>
+    </div>
    
     <!-- first introductory page-->
     <header class ="par1 blue-bg">
-        <!-- markup navigation bar-->
         <div class="intro stop-growth">
             <h2 class = "title">Una Storia Moderna</h2>
             <p>Il nostro obiettivo principale? <br>Progettare una "Replica" volante dell'Idrovolante SIAI-Marchetti</p>
-            <a href="">Unisciti a noi!</a>
+        <a class="sottolineatura small-button" href="">Unisciti a noi!</a>
         </div>
-        <img src= "img/logo_home_png.png">
-        
+        <img class = "logo" src= "immagini/Logo_TeamS55_Bianco_Azzurro.png">  
     </header>
     <!--main content of the page organized in 5 different sections (one for each link of the nav)-->
     <main>
-        <section class="blue-bg">
+        <section id = "team-description" class="blue-bg">
             <div class = "two-cols stop-growth">
                 <div class = "container1">
-                    <img src="./img/immagine_team_png.png">
-                    <p>
-                        Il "Team S55" nasce nel 2017 da un gruppo di studenti del Politecnico di Torino,
-                        spinti dalla volontà di aiutare il gruppo "Replica55" nella progettazione, 
-                        volante, del SIAI-Marchetti S55X. Grazie al forte legame con il docente Giuseppe 
-                        Gabrielli, che progettò la prima versione metallica dell'idrovolante, e la 
-                        possibilità di vivere un'esperienza progettuale integrata tra le varie discipline, 
-                        l'intero gruppo si concentra sulla progettazione e possibilità di effettuare prove sperimentali.
-                    </p>
+                    <input class="hidden" type="radio" id ="team" name ="com-scomp" checked>
+                    <div class="sezioniii">
+                        <img src="./img/foto-team.jpg">
+                        <p class = "paragrafo">
+                            Il "Team S55" nasce nel 2017 da un gruppo di studenti del Politecnico di Torino,
+                            spinti dalla volontà di aiutare il gruppo "Replica55" nella progettazione, 
+                            volante, del SIAI-Marchetti S55X. Grazie al forte legame con il docente Giuseppe 
+                            Gabrielli, che progettò la prima versione metallica dell'idrovolante, e la 
+                            possibilità di vivere un'esperienza progettuale integrata tra le varie discipline, 
+                            l'intero gruppo si concentra sulla progettazione e possibilità di effettuare prove sperimentali.
+                        </p>
+                    </div>
+                    <input class="hidden" type="radio" id ="aereomodello" name ="com-scomp">
+                    <div class="sezioniii">
+                        <img src="./img/foto-team.jpg">
+                        <p class = "paragrafo">
+                            La sezione Aeromodello si occupa della gestione e dell'implementazione dei CAD dell’aeromodello 
+                            dell’idrovolante SIAI Marchetti S55 X, gestendo contemporaneamente la realizzazione ed 
+                            assemblaggio dell’aeromodello tramite l’utilizzo di stampe 3D, fibra di carbonio, fibra 
+                            di vetro ed altri materiali per la lavorazione di compositi.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class ="big-button">Progetti</h2>
+                        <hr color="white" noshade>
+                    </div> 
                 </div>
                 <!--markup of the buttons-->
                 <div class = "container2">
-                    <h2>Team</h2>
+                    <label for="team">
+                        <h2 class = "big-button">Team</h2>
+                    </label>
                     <div class="didascalia">Le nostre sezioni</div>
                     <ul class="grid3x3 team-sections">
                         <li>
-                            <a href="#">
+                            <label for="aereomodello">
                                 <img src="./img/sezioni/icona_aeromodello_png.png">
                                 <span>Aereomodello</span>
-                            </a>
+                            </label>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="sottolineatura" href="#">
                                 <img src="./img/sezioni/icona_comunicazione_png.png">
                                 <span>Comunicazione</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="sottolineatura" href="#">
                                 <img src="./img/sezioni/icona_aerodinamica_png.png">
                                 <span>Aerodinamica</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="sottolineatura" href="#">
                                 <img src="./img/sezioni/icona_fem_png.png">
                                 <span>FEM</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="sottolineatura" href="#">
                                 <img src="./img/sezioni/icona_meccanica_png.png">
                                 <span>Meccanica del volo</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="sottolineatura" href="#">
                                 <img src="./img/sezioni/icona_sistemi_png.png">
                                 <span>Sistemi</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="sottolineatura" href="#">
                                 <img src="./img/sezioni/icona_management_png.png">
                                 <span>Managment</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="sottolineatura" href="#">
                                 <img src="./img/sezioni/icona_aerodinamica_png.png">
                                 <span>Prove di laboratorio</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="./img/sezioni/icona_fsi_png.png">
+                            <a class="sottolineatura" href="#">
+                                <img src="./img/sezioni/icone_fsi_png.png">
                                 <span>FSI</span>
                     
                             </a>
@@ -118,62 +137,110 @@
             </div>
         </section>
         <section>
-            <h2>S55X</h2>
-            <div class="grid2 stop-growth">
-                <div>
-                    L'idrovolante Savoia Marchetti S55 X è un simbolo della notevole conoscenza 
-                    aeronautica raggiunta in Italia negli anni '20 e '30, confermato da una serie 
-                    di voli record a lunga distanza. Sebbene siano stati fabbricati circa 250 
-                    aeromobili, ad oggi non esiste un solo esempio volante. Attualmente l'unico 
-                    rimasto e conservato è esposto nel museo aeronautico TAM in Brasile. Nel 2015 
-                    un gruppo di professionisti competenti ed entusiasti del settore aeronautico 
-                    ha avviato il progetto "Replica55" con l'obiettivo di progettare, costruire 
-                    e pilotare una replica dell'idrovoilante S55 X. 
-                </div>
-                <img src="./img/immagine_s55x_png.png"> 
+            <div id = "s55-history" class = "stop-growth">
+                <h2>S55X</h2>
+                <div class="cols-4">
+                    <p class="span-2">
+                        L'idrovolante Savoia Marchetti S55 X è un simbolo della notevole conoscenza 
+                        aeronautica raggiunta in Italia negli anni '20 e '30, confermato da una serie 
+                        di voli record a lunga distanza. Sebbene siano stati fabbricati circa 250 
+                        aeromobili, ad oggi non esiste un solo esempio volante. Attualmente l'unico 
+                        rimasto e conservato è esposto nel museo aeronautico TAM in Brasile. Nel 2015 
+                        un gruppo di professionisti competenti ed entusiasti del settore aeronautico 
+                        ha avviato il progetto "Replica55" con l'obiettivo di progettare, costruire 
+                        e pilotare una replica dell'idrovoilante S55 X. 
+                    </p>
+                    <div class="wrap-img span-2">
+                        <img class="span-2" src="./immagini/seaplane.jpg"> 
+                    </div>
+                    <div class="wrap-img"><img src="./immagini/cartina1.jpg"> </div>
+                    <div class="wrap-img"><img src="./immagini/cartina2.jpg"></div>
+                    <div class="wrap-img"><img src="./immagini/cartina3.jpg"></div>
+                    <a class="sottolineatura" href="">scopri di più</a>
             </div>
-            <div class = "grid4 stop-growth">
-                <img src="./img/immagine_tratta1_png.png">
-                <img src="./img/immagine_tratta2_png.png">
-                <img src="./img/immagine_tratta3_png.png">
-                <a href="">scopri di più</a>
             </div>
         </section>
-        <section>
+        <section id = "events" class = "blue-bg">
             <h2>Eventi</h2>
+            <div class = "two-coll-event stop-growth">
+                <div class = "events">
+                    <ul class="list-group list-group-flush">
+                       
+                            <li class="list-group-item">
+                                Evento 1                     
+                            </li>
+                           
+                        
+                        <hr color="white" noshade>
+                        <li class="list-group-item">Evento 2</li><hr color="white" noshade>
+                        <li class="list-group-item">Evento 3</li><hr color="white" noshade>
+                     </ul>
+                    </div>
+                <div>
+                    <img src="./immagini/1.provaSpe.png">
+                </div>
+            </div>
         </section>
-        <section>
+        <section id = "sponsor-team">
             <h2>Sponsors</h2>
             <div class = "sponsors stop-growth">
-                <img src="./img/loghi/icona_poli_png.png">
-                <img src="./img/loghi/altair_png.png">
-                <img src="./img/loghi/replica55_png.png">
-                <img src="./img/loghi/ellena_png.png">
-                <img src="./img/loghi/hpc_png.png">
-                <img src="./img/loghi/siemens_png.png">
-                <img src="./img/loghi/ades_png.png">
-                <img src="./img/loghi/spem_png.png">
-                <img src="./img/loghi/mike_png.png">
-                <img src="./img/loghi/beta_png.png">
+                <div class = container-img><img src="./immagini/Politecnico_di_Torino_Logo.png"></div>
+                <div class = container-img><img src="./immagini/Altair.png"></div>
+                <div class = container-img><img src="./immagini/Replica_Logo.png"></div>
+                <div class = container-img><img src="./immagini/Ellena.png"></div>
+                <div class = container-img><img src="./immagini/Siemens.jpg"></div>
+                <div class = container-img><img src="./immagini/hpc.jpeg"></div>
+                <div class = container-img><img src="./immagini/AdesGroup.png"></div>
+                <div class = container-img><img src="./immagini/SPEM.png"></div>
+                <div class = container-img><img src="./immagini/mike_compositi.png"></div>
+                <div class = container-img><img src="./immagini/BETA_Logo.png"></div>
             </div>
         </section>
         <!--form-->
-        <section>
-            <h2>Contatti</h2>
-            <div class = "contatti">
-                <label>Nome</label>
-                <input type="text"/>
-                <label>Email</label>
-                <input type="email"/> <br>
-                <label>Testo</label> <br>
-                <textarea rows="5" cols = "30">
-                    
-                </textarea> <br>
-                <input type="submit"value="Invia"/>
-
-            </div>  
+        <section id = "form" class="blue-bg">
+            <div class="stop-growth">
+                <h2>Contatti</h2>
+                <div class = "double-col">
+                    <div class = "maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.153163413946!2d7.660182915169027!3d45.06240397909824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478620b85cabc337%3A0xd97006264fbdaf1b!2sPolitecnico%20di%20Torino!5e0!3m2!1sit!2sit!4v1663672976585!5m2!1sit!2sit" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class = "contatti">
+                        <div class = "four-rows">
+                            <div class = "textbox contacts">
+                                <div class = "nome">
+                                    <label>Nome</label>
+                                    <input type="text"/>
+                                </div>
+                                <div class = "email">
+                                    <label>Email</label>
+                                    <input type="email"/>
+                                </div> 
+                            </div>
+                            <div class = "textbox">
+                                <label>Testo</label> <br>
+                                <textarea rows="5" cols = "29">
+                                </textarea> 
+                            </div>
+                            <div class = "textbox"> <input type="submit"value="Invia"/></div>
+                            <div>
+                                <div class="image-div">
+                                    <img class="social-logo" src="./immagini/facebook.png">
+                                </div>
+                                <div class="image-div">
+                                    <img class="social-logo" src="./immagini/instagram.png">
+                                </div>
+                                <div class="image-div">
+                                    <img class="social-logo" src="./immagini/LINKEDIN-LOGOPNG1.png">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> 
+                </div> 
+            </div>   
         </section>
     </main>
-
+    <button id = "back-to-top" class="back-to-top"><img src = "immagini/up-chevron.png"></button>
+    <script src="main.js"></script>
 </body>
 </html>
