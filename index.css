@@ -231,17 +231,17 @@ nav a {
 /*introductory page styling*/
 
 .intro{
-    margin-top: 6rem;
+    margin-top: 13.5rem;
     text-align: center;
 }
 
 header img {
     position: absolute;
-    
+    margin-top: 3.5rem;
     object-fit: cover;
     display: block;
     max-width: 100%;
-    max-height: 75%;
+    max-height: 65%;
     display: block;
     margin-left: auto;
     place-self: center;
@@ -276,6 +276,7 @@ body {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     column-gap: 4.5rem;
+    height: 100vh;
     
 }
 
@@ -333,20 +334,20 @@ section {
 /*making it responsive*/
 @media (min-width:30rem) and (max-width: 60rem){
     .intro{
-        margin-top: 2.3rem;
+        margin-top: 4rem;
     }
     .par1{
         display: flex;
         flex-direction: column;
         align-items: center;
         align-self: center;
-        height: unset;
+        height: 100vh;
     }
 
     .par1 img{
         position: relative;
         /* margin-left: unset; */
-        margin-top: 0.7rem;
+        margin-top: 2rem;
     }
 
     .title {
@@ -360,7 +361,7 @@ section {
     .logo{
         object-fit: cover;
         display: block;
-        height: 17rem;
+        height: 19rem;
         align-items: center;
         margin-left: unset;
     }
@@ -374,7 +375,7 @@ section {
         flex-direction: column;
         align-items: center;
         align-self: center;
-        height: unset;
+        height: 75vh;
     }
 
     .par1 img{
@@ -397,7 +398,7 @@ section {
     .logo{
         object-fit: cover;
         display: block;
-        height: 14rem;
+        height: 20rem;
         align-items: center;
         margin-left: unset;
         padding-top: 2.3rem;
@@ -514,6 +515,7 @@ input:checked + div {
     .two-cols {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .container1 p {
@@ -535,6 +537,7 @@ input:checked + div {
 /* s55x */
 .subtitle{
     font-family:'Ethnocentric Rg', sans-serif;
+    font-size: 2rem;
 }
 
 .cols-4 {
@@ -610,7 +613,7 @@ input:checked + div {
 .sponsors {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 2.5rem;
+    gap: 2ssrem;
     align-items: center;
 }
 
@@ -672,7 +675,9 @@ input:checked + div {
     color: white;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    column-gap: 3rem;
+    column-gap: 4rem;
+    height: 65vh;
+    max-width: 67rem;
 
 }
 
@@ -703,6 +708,7 @@ input:checked + div {
     font-size: 1.4rem;
     position: relative;
 }
+
 
 details > summary {
     list-style: none;
@@ -747,6 +753,8 @@ details[open] line.vertical { transform: rotate(90deg); }
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        height: unset;
+        max-width: 30rem;
        
     }
     .events{
@@ -769,6 +777,11 @@ details[open] line.vertical { transform: rotate(90deg); }
 
 
 /*contatti section styling*/
+.form-title {
+    color: white;
+    font-family:'Ethnocentric Rg', sans-serif;
+    font-size: 2rem;
+}
 
 .contatti{
     color: white;
@@ -826,6 +839,14 @@ details[open] line.vertical { transform: rotate(90deg); }
     max-height: 200px;
 }
 
+.recapiti {
+    color: white;
+    margin-top: 2rem;
+}
+
+.recapiti p {
+    margin: 0.4rem;
+}
 
 /*making it responsive*/
 @media (max-width:50rem) {
@@ -867,7 +888,14 @@ details[open] line.vertical { transform: rotate(90deg); }
         display: block;
     }
 
-}
+    .recapiti{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recapiti p {
+        align-self: center;
+    }
 
 /*cookie banner stye*/
 .cookie-container{
