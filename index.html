@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<style>
+    @import url('http://fonts.cdnfonts.com/css/ethnocentric');
+</style>
+
     <div class = "navigation-bar blue-bg ">
         <h1 class = "team-s55">Team S55</h1>
         <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
@@ -29,13 +33,19 @@
     </div>
    
     <!-- first introductory page-->
-    <header class ="par1 blue-bg">
-        <div class="intro stop-growth">
-            <h2 class = "title">Una Storia Moderna</h2>
-            <p>Il nostro obiettivo principale? <br>Progettare una "Replica" volante dell'Idrovolante SIAI-Marchetti</p>
-        <a class="sottolineatura unisciti-a-noi" href="">Unisciti a noi!</a>
+    <header class ="par1 blue-bg ">
+        <div>
+            <div class="intro">
+                <h2 class = "title">Una Storia Moderna</h2>
+                 <p>Il nostro obiettivo principale? <br>Progettare una "Replica" volante dell'Idrovolante SIAI-Marchetti</p>
+                 <div class = "cointaner-button">
+                        <a class="sottolineatura unisciti-a-noi" href="">Unisciti a noi!</a>
+                 </div>
+            </div>
         </div>
-        <img class = "logo" src= "immagini/Logo_TeamS55_Bianco_Azzurro.png">  
+        <div>
+            <img class = "logo" src= "immagini/Logo_TeamS55_Bianco_Azzurro.png">  
+        
     </header>
     <!--main content of the page organized in 5 different sections (one for each link of the nav)-->
     <main>
@@ -179,55 +189,55 @@
                     <ul class="grid3x3 team-sections">
                         <li class="sottolineatura">
                             <label for="aereomodello">
-                                <img src="./img/sezioni/icona_aeromodello_png.png">
+                                <img src="./immagini/Aeromodello.png">
                                 <span>Aereomodello</span>
                             </label>
                         </li>
                         <li class="sottolineatura">
                             <label for = "comunicazione">
-                                <img src="./img/sezioni/icona_comunicazione_png.png">
+                                <img src="./immagini/Comunicazione.png">
                                 <span>Comunicazione</span>
                             </label>
                         </li>
                         <li class="sottolineatura">
                             <label for ="aereodinamica">
-                                <img src="./img/sezioni/icona_aerodinamica_png.png">
+                                <img src="./immagini/Aerodinamica.png">
                                 <span>Aerodinamica</span>
                             </label>
                         </li>
                         <li class="sottolineatura">
                             <label for = "fem">
-                                <img src="./img/sezioni/icona_fem_png.png">
+                                <img src="./immagini/FEM.png">
                                 <span>FEM</span>
                             </label>
                         </li>
                         <li class="sottolineatura">
                             <label for = "mdv">
-                                <img src="./img/sezioni/icona_meccanica_png.png">
+                                <img src="./immagini/Meccanica del volo.png">
                                 <span>Meccanica del volo</span>
                             </label>
                         </li>
                         <li class="sottolineatura">
                             <label for = "sistemi">
-                                <img src="./img/sezioni/icona_sistemi_png.png">
+                                <img src="./immagini/Sistemi.png">
                                 <span>Sistemi</span>
                             </label>
                         </li>
                         <li class="sottolineatura">
                             <label for = "managment">
-                                <img src="./img/sezioni/icona_management_png.png">
+                                <img src="./immagini/Management.png">
                                 <span>Managment</span>
                             </label>
                         </li>
                         <li class="sottolineatura">
                             <label for = "pdl">
-                                <img src="./img/sezioni/icona_aerodinamica_png.png">
+                                <img src="./immagini/Prove di laboratorio.png">
                                 <span>Prove di laboratorio</span>
                             </label>
                         </li>
                         <li class="sottolineatura">
                             <label for ="fsi">
-                                <img src="./img/sezioni/icone_fsi_png.png">
+                                <img src="./immagini/FSI.png">
                                 <span>FSI</span>
                             </label>
                         </li>
@@ -237,7 +247,7 @@
         </section>
         <section>
             <div id = "s55-history" class = "stop-growth">
-                
+                <h2 class="subtitle">La storia dell'S55</h2>
                 <div class="cols-4">
                     <p class="span-2">
                         L'idrovolante Savoia Marchetti S55 X è un simbolo della notevole conoscenza 
@@ -330,24 +340,23 @@
                   </details>
                   <hr class ="linea-bianca" color="white" noshade>
                 </div>
-                <div>
-                    <img src="./immagini/1.provaSpe.png">
+                <div class = "calendar">
+                    <img src="./immagini/calendar.png">
                 </div>
             </div>
         </section>
         <section id = "sponsor-team">
             
             <div class = "sponsors stop-growth">
-                <div class = container-img><img src="./immagini/Politecnico_di_Torino_Logo.png"></div>
-                <div class = container-img><img src="./immagini/Altair.png"></div>
-                <div class = container-img><img src="./immagini/Replica_Logo.png"></div>
-                <div class = container-img><img src="./immagini/Ellena.png"></div>
-                <div class = container-img><img src="./immagini/Siemens.jpg"></div>
-                <div class = container-img><img src="./immagini/hpc.jpeg"></div>
-                <div class = container-img><img src="./immagini/AdesGroup.png"></div>
-                <div class = container-img><img src="./immagini/SPEM.png"></div>
-                <div class = container-img><img src="./immagini/mike_compositi.png"></div>
-                <div class = container-img><img src="./immagini/BETA_Logo.png"></div>
+                <div class = container-img><a href="https://www.polito.it/"><img src="./immagini/Politecnico_di_Torino_Logo.png"></div></a>
+                <div class = container-img><a href="https://altairengineering.it/"><img src="./immagini/Altair.png"></div></a>
+                <div class = container-img><a href="http://replica55.it/"><img src="./immagini/Replica_Logo.png"></div></a>
+                <div class = container-img><a href="https://www.ellenaspa.com/"><img src="./immagini/Ellena.png"></div></a>
+                <div class = container-img><a href="https://new.siemens.com/it/it.html"><img src="./immagini/Siemens.jpg"></div></a>
+                <div class = container-img><a href="https://hpc.polito.it/"><img src="./immagini/hpc.jpeg"></div></a>
+                <div class = container-img><a href="https://spemadditive.com/it/index"><img src="./immagini/SPEM.png"></div></a>
+                <div class = container-img><a href="http://www.mikecompositi.it/default.aspx"><img src="./immagini/mike_compositi.png"></div></a>
+                <div class = container-img><a href="https://www.beta-cae.com/"><img src="./immagini/BETA_Logo.png"></div></a>
             </div>
         </section>
         <!--form-->
@@ -357,6 +366,9 @@
                 <div class = "double-col">
                     <div class = "maps">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.153163413946!2d7.660182915169027!3d45.06240397909824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478620b85cabc337%3A0xd97006264fbdaf1b!2sPolitecnico%20di%20Torino!5e0!3m2!1sit!2sit!4v1663672976585!5m2!1sit!2sit" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class = "maps-grande">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.153163413946!2d7.660182915169027!3d45.06240397909824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478620b85cabc337%3A0xd97006264fbdaf1b!2sPolitecnico%20di%20Torino!5e0!3m2!1sit!2sit!4v1664562495114!5m2!1sit!2sit" width="350" height="290" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class = "contatti">
                         <div class = "four-rows">
@@ -376,15 +388,15 @@
                                 </textarea> 
                             </div>
                             <div class = "textbox"> <input type="submit"value="Invia"/></div>
-                            <div>
+                            <div class = "logo-container">
                                 <div class="image-div">
-                                    <img class="social-logo" src="./immagini/facebook.png">
+                                    <a href="https://it.linkedin.com/company/team-s55"><img class="social-logo" src="./immagini/LINKEDINwhite (1).png"></a>
                                 </div>
                                 <div class="image-div">
-                                    <img class="social-logo" src="./immagini/instagram.png">
+                                    <a href="https://www.instagram.com/teams55polito/?hl=it"><img class="social-logo" src="./immagini/INSTAGRAMwhitepng (1).png"></a>
                                 </div>
                                 <div class="image-div">
-                                    <img class="social-logo" src="./immagini/LINKEDIN-LOGOPNG1.png">
+                                    <a href="https://it-it.facebook.com/teamS55polito/"><img class="social-logo" src="./immagini/FACEBOOKwhite (1).png"></a>
                                 </div>
                             </div>
                         </div>
