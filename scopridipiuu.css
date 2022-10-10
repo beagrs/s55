@@ -49,20 +49,23 @@ h1 {
     margin-right: auto;
 }
 .carosello {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.carosello img{
-    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
     height: 100%;
-    object-fit: cover;
+    width: 100%;
+    background-color: #333a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.carosello.hidden {
+    display: none;
 }
 
 .carousel_track_container{
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
     position: relative;
     overflow-x: hidden;
 }
@@ -75,24 +78,47 @@ h1 {
     position: relative;
     align-items: center;
     width: 100%;
-    transition: transform 250ms ease-in;
+    height: 100%;
 }
-
+.carousel-track.smooth {
+    transition: transform .2s ease;
+}
+.carousel-img {
+    position: relative;
+}
+.carousel-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 .carousel-slide{
     min-width: 100%;
     width: 100%;
     height: 100%;
-    align-items: center;
+    max-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    overflow-y: hidden;
 }
 
-.carousel-img img {
-    max-width: 100%;
-    object-fit: cover;
+.carousel-descruptio{
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.2rem;
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
+    color: white;
+    
+
 }
 
 .carousel_button{
-    position: absolute;
-    top: 45%;
     background: transparent;
     cursor: pointer;
     place-self: center;
@@ -103,23 +129,22 @@ h1 {
     display: inline-block;
 }
 
-.carousel_button--left {
-    left: -50px;
-}
-
-.carousel_button--right{
-    right: -50px;
-}
 
 .carousel_button img {
     width: 15px;
 }
 
 .carousel_nav {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,50%);
+
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    margin: 0 12px;
+   
+    background-color:rgba(0, 0, 0,0.5) ;
 }
 
 .carousel-indicator{
@@ -128,7 +153,25 @@ h1 {
     height: 15px;
     background: rgba(0, 0, 0,0.3);
     margin:0.5rem;
+    cursor: pointer;
 }
+
+.current-button {
+    background: rgba(0, 0, 0,0.7);
+}
+
+.exit {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: transparent;
+    cursor: pointer;
+    place-self: center;
+    height: 4rem;
+    
+
+}
+
 
 /*making it responsive*/
 @media (min-width:35rem) and (max-width: 70rem){
@@ -146,6 +189,10 @@ h1 {
 }
 
 @media (max-width:35rem){
+    .carousel_track_container{
+        max-height: 40%;
+    }
+
     .grid-galleria{
         display: flex;
         flex-direction: column;
@@ -157,6 +204,11 @@ h1 {
         align-items: center;
         width: 20rem;
         height: auto;
+    }
+
+    .carousel-descruptio{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 
 }
