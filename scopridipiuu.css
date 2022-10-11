@@ -30,7 +30,6 @@ h1 {
     display: block;
     align-items: center;
     background-color: white;
-    
 }
 
 .grid-galleria img:hover {
@@ -114,8 +113,6 @@ h1 {
     margin-left: 0.9rem;
     margin-right: 0.9rem;
     color: white;
-    
-
 }
 
 .carousel_button{
@@ -134,18 +131,6 @@ h1 {
     width: 15px;
 }
 
-.carousel_nav {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%,50%);
-
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-   
-    background-color:rgba(0, 0, 0,0.5) ;
-}
 
 .carousel-indicator{
     border-radius: 50%;
@@ -156,9 +141,7 @@ h1 {
     cursor: pointer;
 }
 
-.current-button {
-    background: rgba(0, 0, 0,0.7);
-}
+
 
 .exit {
     position: absolute;
@@ -168,8 +151,6 @@ h1 {
     cursor: pointer;
     place-self: center;
     height: 4rem;
-    
-
 }
 
 
