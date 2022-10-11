@@ -6,6 +6,7 @@ const galleriaGrid = document.querySelector(".grid-galleria");
 const track = document.querySelector('.carousel-track');
 //group slide
 const slides = Array.from(track.children);
+console.log(slides);
 
 const nextButton = document.querySelector('.carousel_button--right');
 const prevButton =  document.querySelector('.carousel_button--left');
