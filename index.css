@@ -10,7 +10,8 @@
 /* background*/
 
 .blue-bg {
-    background: linear-gradient(to right, rgb(9, 1, 119), rgb(105, 217, 254) );
+    background: rgba(13, 21, 127);
+    
 }
 
 /*buttons general style*/
@@ -57,7 +58,7 @@
 
 .navigation-bar{
     text-align: center;
-    position: absolute;
+    position: fixed;
     z-index: 999;
     width: 100%;
     padding: 1rem;
@@ -99,6 +100,7 @@ nav {
     transform: scale(1,0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
+    
 }
 
 .nav-toggle {
@@ -147,8 +149,10 @@ nav a {
 
 .team-s55 {
     color: white;
+    text-align: center;
     text-decoration: none;
     font-size: 2.2rem;
+    margin-top: 5rem;
     font-family:'Ethnocentric Rg', sans-serif;
     text-transform: uppercase;
 }
@@ -231,7 +235,7 @@ nav a {
 /*introductory page styling*/
 
 .intro{
-    margin-top: 13.5rem;
+    margin-top: 6rem;
     text-align: center;
 }
 
@@ -245,6 +249,7 @@ header img {
     display: block;
     margin-left: auto;
     place-self: center;
+    place-items: center;
     
 }
 
@@ -261,14 +266,21 @@ header a{
 }
 body {
     font-family:Arial, Helvetica, sans-serif;
-    color: black;
+    color: white;
     font-size: 1.1rem;
     text-align: justify;
     line-height: 1.4rem;
 }
 
 
+
 .par1{
+    background-image: 
+    linear-gradient(rgba(13, 21, 127, 0.8), rgba(13, 21, 127, 0.8)), 
+    url("./Home\ e\ Team/Sfondo.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color:white;
     height: 60vh;
     position: relative;
@@ -280,7 +292,9 @@ body {
     
 }
 
-
+.paragrafo p{
+    padding-top: 0.5rem;
+}
 h2 {
     margin-bottom: 2rem;
     text-align: center;
@@ -295,20 +309,18 @@ h2 {
 }
 
 .big-button{
-    background-color: #ffffff80;
-    color: white;
+    background-color: rgb(221, 220, 220);
+    color:  rgba(13, 21, 127);
     font: 1.3em sans-serif;
     padding: 0.7rem;
     border-radius: .4rem;
-    border-left-style: double;
-    border-bottom-style: double;
-    border-right-style: double;
     border-width: 0.35rem;
     cursor: pointer;
 }
 
 .cointaner-button {
     padding-bottom: 1.7rem;
+    
 }
 
 .par1 p{
@@ -321,20 +333,22 @@ section {
 }
 
 .unisciti-a-noi {
-    background-color: #ffffff80;
-    color: white;
+    background-color: white;
+    color: 13, 21, 127;
     font: 1em sans-serif;
     padding: 0.8rem;
     font-size: 1.2rem;
     border-radius: .4rem;
     border-width: 0.35rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 
 /*making it responsive*/
-@media (min-width:30rem) and (max-width: 60rem){
+@media (min-width:30rem) and (max-width: 50rem){
     .intro{
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
     .par1{
         display: flex;
@@ -366,16 +380,23 @@ section {
         margin-left: unset;
     }
 
+    .paragrafo{
+        padding-bottom: 2rem;
+    }
+
 }
 
 @media (max-width:30rem){
+    .body {
+        padding: 1rem;
+    }
     .par1{
         padding-top: 4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         align-self: center;
-        height: 75vh;
+        
     }
 
     .par1 img{
@@ -406,16 +427,39 @@ section {
 }
 
 /*section team styling*/
+.testo-didascalia{
+    list-style-position: outside;
+    padding-left: 2.5ch;
+}
+.arancio{
+    color: rgb(243 144 75);
+}
+
+.yt-video {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-top: 56.25%;
+}
+.yt-video > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .container1 p {
-    padding-top: 3rem;
+    padding-top: 2rem;
 }
 
 .two-cols {
     color: #f3eded;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
+    column-gap: 4.5rem;
 }
 
 .two-cols img{
@@ -434,7 +478,7 @@ section {
 
 .hidden {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     width: 0;
     height: 0;
@@ -442,35 +486,15 @@ section {
     transform: scale(0);
 }
 
-.paragrafo {
-    margin-bottom: 2.2rem;
+.title-descipion-team{
+    color: white;
+    font-family:'Ethnocentric Rg', sans-serif;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.grid3x3 {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.team-sections {
-    list-style: none;
-}
-.team-sections > li {
-    background-color: #ffffff80;
-    border-radius: .4rem;
-}
-.team-sections > li > label,
-.team-sections > li > a {
-    cursor: pointer;
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: .3rem;
-    border-radius: .4rem;
-}
 .team-sections img {
     height: 4rem;
     width: 4rem;
@@ -483,8 +507,9 @@ section {
     display: block;
     text-align: center;
     padding-top: 0.5rem;
+    font-family:'Ethnocentric Rg', sans-serif;
+    font-size: 0.8rem;
 }   
-
 
 .container1 {
     position: relative;
@@ -492,12 +517,51 @@ section {
 .sezioniii{
     display: none;
 }
+
 input:checked + div {
     display: block;
 }
 
+
 .container2 label {
     margin: 0;
+}
+
+.button-project{
+    text-decoration: none;
+}
+
+.grid3x3 {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+.team-sections span{
+    color: rgba(13, 21, 127);
+}
+.team-sections {
+    list-style: none;
+}
+.team-sections > li {
+    background-color: rgb(221, 220, 220);
+    border-radius: .8rem;
+    
+}
+.team-sections > li > label,
+.team-sections > li > a {
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .3rem;
+    border-radius: .4rem;
+}
+
+.progetti{
+    margin-top: 3rem;
 }
     
 
@@ -507,15 +571,26 @@ input:checked + div {
         display: flex;
         flex-direction: column;
     }
+    .progetti{
+        margin-top: 4rem;
+    }
+
+
+        
 }
 
 
 @media (max-width:30rem) {
+    .progetti{
+        margin-top: 4rem;
+    }
+        
     
     .two-cols {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0.8rem;
     }
 
     .container1 p {
@@ -530,6 +605,11 @@ input:checked + div {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    .title-descipion-team{
+        font-size: 1.4rem;
+    }
+    
     
   
 }
@@ -538,13 +618,16 @@ input:checked + div {
 .subtitle{
     font-family:'Ethnocentric Rg', sans-serif;
     font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .cols-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     max-width: 100%;
-    gap: 2rem;
+    gap: 2.8rem;
+    height: 85vh;
 }
 .span-2 {
     grid-column: span 2;
@@ -595,11 +678,12 @@ input:checked + div {
 
 /*making it responsive*/
 
-
 @media (max-width:50rem) {
     .cols-4{
         display: flex;
         flex-direction: column;
+        margin: 0.8rem;
+        height: unset;
     }
     
     .tratta{
@@ -613,7 +697,7 @@ input:checked + div {
 .sponsors {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 2ssrem;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -638,7 +722,6 @@ input:checked + div {
     place-self: center;
 }
 
-
 /*making it responsive*/
 @media (min-width:35rem) and (max-width: 70rem){
     .sponsors{
@@ -649,7 +732,7 @@ input:checked + div {
 
     .sponsors img{
         align-self: center;
-        width: 18rem;
+        width: 14rem;
         height: auto;
     }
 }
@@ -658,13 +741,13 @@ input:checked + div {
     .sponsors{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem
+        gap: 0.5rem
     }
 
 
     .sponsors img{
-        align-items: center;
-        width: 10rem;
+        align-self: center;
+        width: 9rem;
         height: auto;
     }
 
@@ -676,8 +759,9 @@ input:checked + div {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 4rem;
-    height: 65vh;
+    height: 70vh;
     max-width: 67rem;
+    margin-top: 3rem;
 
 }
 
@@ -741,24 +825,26 @@ details[open] line.vertical { transform: rotate(90deg); }
     width: 18rem;
     object-fit: cover;
     display: block;
-
 }
 
 
 /*making it responsive*/
-
-
 @media (max-width:40rem) {
+    .form-title{
+        text-align: center;
+    }
     .two-coll-event{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         height: unset;
         max-width: 30rem;
+        margin: 0.8rem;
        
     }
     .events{
         margin-bottom: 3rem;
+        padding-right: 1rem;
       
     }
 
@@ -775,12 +861,12 @@ details[open] line.vertical { transform: rotate(90deg); }
 } 
 
 
-
 /*contatti section styling*/
 .form-title {
     color: white;
     font-family:'Ethnocentric Rg', sans-serif;
     font-size: 2rem;
+    margin-top: 1.5rem;
 }
 
 .contatti{
@@ -791,6 +877,7 @@ details[open] line.vertical { transform: rotate(90deg); }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
+    margin-top: 3rem;
 }
 
 .image-div{
@@ -897,30 +984,5 @@ details[open] line.vertical { transform: rotate(90deg); }
         align-self: center;
     }
 
-/*cookie banner stye*/
-.cookie-container{
-    position: fixed;
-    bottom: -100%;
-    left:0;
-    right: 0;
-    background: #2f3640;
-    color: #f5f6fa;
-    padding: 1.3rem;
-    box-shadow: 0 -2px 16px  rgba(47, 54, 64, 0.389);
-    transition: 400ms;
-}
-
-.cookie-container.active {
-    bottom: 0;
-}
-
-.cookie-btn {
-    background: #e84114;
-    border: 0;
-    color:#f5f6fa;
-    padding: 0.5rem 1.5rem;
-    font-size: 1.2rem;
-    border-radius: .4rem;
-    cursor: pointer;
 }
 
