@@ -136,7 +136,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Ethnocentric Rg', sans-serif;
     text-align: justify;
     text-transform: uppercase;
     opacity: 0;
@@ -302,10 +302,16 @@ h2 {
 }
 
 .title {
+    font-family:'Ethnocentric Rg', sans-serif;
     line-height: 1rem;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
+}
+
+.intro p {
+    font-family:'Ethnocentric Rg', sans-serif;
+    font-size: 1.5rem;
 }
 
 .big-button{
@@ -348,7 +354,7 @@ section {
 /*making it responsive*/
 @media (min-width:30rem) and (max-width: 50rem){
     .intro{
-        margin-top: 3rem;
+        margin-top: 2.1rem;
     }
     .par1{
         display: flex;
@@ -382,6 +388,9 @@ section {
 
     .paragrafo{
         padding-bottom: 2rem;
+    }
+    .cointaner-button {
+        padding-bottom: 0.2rem;
     }
 
 }
@@ -697,60 +706,92 @@ input:checked + div {
 .sponsors {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
-    align-items: center;
+    gap: 3rem;
+    align-items: top;
 }
 
 .sponsors img {
-    display: flex;
     padding: 2rem;
-    flex-wrap: wrap;
-    height: auto;
-    width: 17rem;
-    object-fit: cover;
+    height: 12rem;
+    width: 100%;
+    max-height: 12rem;
+    object-fit: contain;
+    object-position: center;
     display: block;
     align-items: center;
     background-color: white;
     
+}
+.logo-polito{
+    display: flex;
+    justify-content: center;
+    padding: 3.5rem;
+    margin: 1rem;
+}
+
+.logo-polito img {
+    object-position: center;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+    max-height: 20rem;
+}
+
+.sponsors a {
+    display: block;
 }
 
 .sponsors img:hover {
     cursor: pointer;
 }
 
-.container-img {
-    place-self: center;
+.container-img img{
+    background: rgba(13, 21, 127);
 }
+
 
 /*making it responsive*/
 @media (min-width:35rem) and (max-width: 70rem){
     .sponsors{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        padding: 0;
+        margin: 0.5rem;
+     
     }
 
     .sponsors img{
         align-self: center;
-        width: 14rem;
-        height: auto;
+        height: 8rem;
+        width: 100%;
+        max-height: 12rem;
+        object-fit: contain;
+        object-position: center;
     }
 }
 
 @media (max-width:35rem){
     .sponsors{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1.2rem;
+
+      
     }
 
 
     .sponsors img{
         align-self: center;
-        width: 9rem;
-        height: auto;
+        align-self: center;
+        height: 9rem;
+        width: 100%;
+        max-height: 9rem;
+        object-fit: contain;
+        object-position: center;
     }
 
+    .logo-polito {
+        padding: 2.8rem;
+    }
 }
 
 /*eventi section styling*/
