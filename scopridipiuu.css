@@ -5,11 +5,196 @@
     box-sizing: border-box;
     
 }
-h1 {
+
+.blue-bg {
+    background: rgba(13, 21, 127);
+    
+}
+
+
+/*navbar*/
+
+
+.navigation-bar{
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 1rem;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 1.8em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+}
+
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+    top:7px
+}
+
+
+nav {
+    margin-top: 1rem;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top:0;
+    left:0;
+    margin-left: 1.5em;
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family:'Ethnocentric Rg', sans-serif;
+    text-align: justify;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+
+}
+.voci {
+    color: white;
+}
+
+
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+    background-color: rgba(256, 256, 256,0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+    
+}
+
+
+
+/*adapt to larger screens*/
+@media (min-width: 1100px) {
+    .nav-toggle-label{
+        display: none;
+    }
+
+    .navigation-bar{
+        display: grid;
+        grid-template-columns: 5fr auto minmax(800px,3fr) 1fr;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3/4 ;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+    
+    nav a {
+        opacity: 1;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+       
+    }
+
+    nav li {
+        margin-left:3em;
+        margin-bottom: 0;
+       
+    }
+}
+
+
+body{
+  
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.4rem;
+}
+
+
+h2 {
     font-family:'Ethnocentric Rg', sans-serif;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
+    color: white;
+    padding-top: 5rem;
+}
+
+.approfondimento{
+    height: 100vh;
+}
+
+
+.approfondimento p{
+    margin: 2.2rem;
+}
+
+
+.subtitle{
+   
+    text-align: center;
+    font-family:'Ethnocentric Rg', sans-serif;
+
 }
 
 .grid-galleria {
@@ -22,7 +207,7 @@ h1 {
 
 .grid-galleria img {
     display: flex;
-    padding: 2rem;
+    padding: 0.5rem;
     flex-wrap: wrap;
     height: auto;
     width: 22rem;
@@ -38,6 +223,10 @@ h1 {
 
 .container-img {
     place-self: center;
+}
+
+.container-img img {
+    background-color: rgba(13, 21, 127);
 }
 
 /*carousel implementation*/
@@ -132,15 +321,6 @@ h1 {
 }
 
 
-.carousel-indicator{
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: rgba(0, 0, 0,0.3);
-    margin:0.5rem;
-    cursor: pointer;
-}
-
 .exit {
     position: absolute;
     top: 1rem;
@@ -165,7 +345,18 @@ h1 {
         width: 18rem;
         height: auto;
     }
+
+    .approfondimento p{
+        margin: 1.8rem;
+    }
+
+    h2{
+        padding-top: 3rem;
+        font-size: 2rem;
+    }
 }
+
+
 
 @media (max-width:35rem){
     .carousel_track_container{
@@ -188,6 +379,26 @@ h1 {
     .carousel-descruptio{
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+
+    .exit {
+        position: absolute;
+        top: 7rem;
+    }
+
+    .approfondimento{
+        margin-top: 1.7rem;
+        height: unset;
+        padding-top: 1.5rem;
+    }
+
+    .approfondimento p{
+        margin: 1.5rem;
+    }
+
+    h2{
+        padding-top: 0.4rem;
+        font-size: 1.1rem;
     }
 
 }

@@ -37,7 +37,7 @@ nextButton.addEventListener('click', e => {
     currentIndex++;
 });
 
-//click right button go to the right
+//click left button go to the left
 prevButton.addEventListener('click', e => {
     //understand where i am
     const prev = current.previousElementSibling;
